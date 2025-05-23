@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Netflix Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"><img src="images/logo.png"></a>
+    <ul class="navigation">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Séries</a></li>
+      <li><a href="#">Filmes</a></li>
+      <li><a href="#">Bombando</a></li>
+      <li><a href="#">Minha lista</a></li>
+    </ul>
+    <div class="search">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <i class="fa fa-gift" aria-hidden="true"></i>
+      <i class="fa fa-bell" aria-hidden="true"></i>
+      <i>
+        <img src="images/eu.png" alt="Perfil" />
+      </i>
+    </div>
+  </header>
+  <div class="banner">
+    <img src="images/teste1.jpg" class="bg">
+    <div  class="content">
+      <div class="logo2">
+        <span class="n">N</span>Séries
+      </div>
+      <h1 class="title">Cristian & Fernanda</h1>
+      <h4>
+        <span class="juntos">Juntos Desde</span>
+        <span>2017</span>
+        <span><i>L</i></span>
+        <span> 8 temporadas</span>
+        <span class="hd"> HD </span>
+      </h4>
+      <div>   
+       <div class="top10-badge">
+        <span class="top10-text">TOP</span>
+        <span class="top10-text1">10</span>
+       </div>
+      <span class="melhorCasal"> Melhores Casais do Mundo</span>
+      </div>
+     
+      
+      <p class="decription">Estar com você foi a decisão mais fácil que tomei na vida e me sinto a pessoa 
+        mais sortuda do mundo todos os dias. Eu amo sua honestidade, sua paixão, sua resiliência, sua coragem, 
+        sua parceria. Você é a minha alma gêmea, minha melhor amiga, minha confidente. Minha vida estava em 
+        preto e branco, você chegou e coloriu com seu sorriso e sua luz. Com amor, Arthur.</p>
+      <div class="buttons">
+        <a href="#"><i class="fas fa-play"></i>Play</a>
+        <a href="#"><i class="fas fa-check "></i>Favorito</a>
+        
+        <div class="likesIcon">
+          <i class="fas fa-thumbs-up"></i>
+        </div>
+        
+        <div class="likesIcon">
+          <i class="fas fa-thumbs-down"></i>
+        </div>
+      </div>
+      <h4 class="description">
+        <span>Escrito por: Iugner Santos</span>
+        <span>Destinado á: Raiane Bernardo</span>
+        <span>Caracteristicas: Generosa, Amorosa, A mais Bels das Mulheres</span>
+      </h4>
+    </div>
+  </div>
+
+  <section class="carousel-section">
+    <h2>Nossos Melhores Momentos</h2>
+    <div class="carousel">
+      <img src="images/eu.png" alt="Momento 1" onclick="openModal(this)">
+      <img src="images/goku.jpg" alt="Momento 2" onclick="openModal(this)">
+      <img src="images/logo.png" alt="Momento 3" onclick="openModal(this)">
+      <img src="images/teste1.jpg" alt="Momento 4" onclick="openModal(this)">
+      <img src="images/eu.png" alt="Momento 5" onclick="openModal(this)">
+    </div>
+  </section>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImage" class="modal-content" alt="Imagem ampliada">
+  </div>
+  
+  <script>
+    function openModal(imgElement) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modalImg.src = imgElement.src;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
