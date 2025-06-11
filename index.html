@@ -5,10 +5,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
   <header>
     <a href="#" class="logo"><img src="images/logo.png"></a>
+    <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+</div>
+
     <ul class="navigation">
       <li><a href="#">Início</a></li>
       <li><a href="#">Séries</a></li>
@@ -26,20 +32,20 @@
     </div>
   </header>
   <div class="banner">
-    <img src="images/teste1.jpg" class="bg">
+    <img src="images/imagem5.jpg" class="bg">
     <div  class="content">
       <div class="logo2">
         <span class="n">N</span>Séries
       </div>
       <h1 class="title">Cristian & Fernanda</h1>
-      <h4>
+      <h4 class="classificacao">
         <span class="juntos">Juntos Desde</span>
         <span>2017</span>
         <span><i>L</i></span>
         <span> 8 temporadas</span>
         <span class="hd"> HD </span>
       </h4>
-      <div>   
+      <div class="top10">   
        <div class="top10-badge">
         <span class="top10-text">TOP</span>
         <span class="top10-text1">10</span>
@@ -48,12 +54,12 @@
       </div>
      
       
-      <p class="decription">Estar com você foi a decisão mais fácil que tomei na vida e me sinto a pessoa 
-        mais sortuda do mundo todos os dias. Eu amo sua honestidade, sua paixão, sua resiliência, sua coragem, 
-        sua parceria. Você é a minha alma gêmea, minha melhor amiga, minha confidente. Minha vida estava em 
-        preto e branco, você chegou e coloriu com seu sorriso e sua luz. Com amor, Arthur.</p>
+      <p class="decription">Estar ao seu lado é a melhor parte da minha história.
+                            Seu abraço me acalma, seu me olhar entende e seu amor me transforma.
+                            Obrigado por ser meu lar em forma de gente.
+                            Eu te escolho Todos os dias. Te amo!</p>
       <div class="buttons">
-        <a href="#"><i class="fas fa-play"></i>Play</a>
+        <a href="#"><i class="fas fa-play"></i>Assistir</a>
         <a href="#"><i class="fas fa-check "></i>Favorito</a>
         
         <div class="likesIcon">
@@ -98,6 +104,16 @@
     function closeModal() {
       document.getElementById("imageModal").style.display = "none";
     }
+
+  // ...código menu hambuguer...
+
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.querySelector(".navigation");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+
   </script>
 </body>
 </html>

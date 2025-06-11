@@ -120,12 +120,15 @@ header .logo img {
 }
 
 .banner .bg {
-  width: 100%;
-  height: 100%;
+  margin-left: 600px;
+  margin-top: 40px;
+  width: 700px;
+  height: 600px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+
 }
 
 /* gradiente por cima da imagem */
@@ -136,8 +139,16 @@ header .logo img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   z-index: 2;
+
+}
+
+.bg {
+  width: 400px;
+  height: 300px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 
 /* conteúdo em cima da imagem e do gradiente */
@@ -152,8 +163,8 @@ header .logo img {
   font-family: 'Great Vibes', cursive;
   font-size: 4rem;
   color: white;
-  max-width: 500px;
   margin: 15px 0;
+  margin-top: 90px;
 }
 
 .content {
@@ -351,5 +362,188 @@ header .logo img {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* Oculta o menu hambúrguer em telas grandes */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Exibe o botão e oculta o menu em telas pequenas */
+@media (max-width: 768px) {
+
+  .banner .bg {
+    margin-left: 0px;
+    margin-top: 30px;
+    width: 400px;
+    height: 500px;
+  }
+
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 70px;
+    /* ou altura do seu header */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .navigation.show {
+    display: flex;
+  }
+
+  .navigation li {
+    margin: 10px 0;
+  }
+}
+
+
+@media (max-width: 425px) {
+
+  .navigation {
+    top: 60px;
+  }
+
+  .classificacao {
+    margin: 0;
+  }
+
+  .logo2 {
+    margin-top: -20px;
+    position: absolute;
+    font-size: 12px;
+  }
+
+  .logo2 .n {
+    padding-right: 5px;
+    font-size: 25px;
+  }
+
+  .description span {
+    display: none;
+  }
+
+  .likesIcon {
+    display: none;
+  }
+
+  .banner .content p {
+    font-size: 14px;
+    line-height: 1.2rem;
+    margin: 0px 0px 10px;
+  }
+
+  .banner .content .buttons {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+
+  .top10-badge {
+    font-size: 9px;
+    width: 30px;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+
+  .melhorCasal {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .top10 {
+    margin: 0px;
+  }
+
+  .classificacao {
+    margin: 0px;
+  }
+
+  .banner .content h4 {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-top: 250px;
+    margin-bottom: 0px;
+  }
+
+  .banner {
+    padding: 0px;
+  }
+
+  .navigation {
+    left: 100px;
+  }
+
+  header {
+    height: 60px;
+  }
+
+  header .logo img {
+    width: 130px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -16px;
+
+  }
+
+  .search .fa-search {
+    padding-right: 0px;
+    letter-spacing: 5px;
+  }
+
+  .search .fa-gift {
+    display: none;
+    padding-right: 0px;
+    letter-spacing: 5px;
+
+  }
+
+  .search .fa-bell {
+    padding-right: 0px;
+  }
+
+  .search img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border: 1px solid white;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .search {
+    margin-right: -50px;
+  }
+
+
+  .banner .content {
+    padding-bottom: 0px;
+  }
+
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 2;
   }
 }
