@@ -380,7 +380,7 @@ header .logo img {
   .banner .bg {
     margin-left: 10px;
     margin-top: -80px;
-    width: 100%;
+    width: 400px;
     height: 600px;
   }
 
@@ -449,7 +449,7 @@ header .logo img {
 
   .banner .content .buttons {
     font-size: 14px;
-    margin-bottom: 0px;
+    margin-top: 20px;
   }
 
   .top10-badge {
